@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=UnifrakturCook:wght@700&display=swap'); 
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  display: grid;
+  grid-template-rows: min-content auto;
+  grid-template-columns: 250px auto;
+  height: 100vh;
+  overflow: scroll;
+  background-image: linear-gradient(to right, #8f84ab, #516395); 
+}
+
+header {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  border-bottom: 4px solid black; 
+  color: white;
+  grid-column: 1 / span 2;
+  padding: 10px 5px;
+  height: 5vh;
+}
+
+button {
+  background-color: #f76707; 
+  color: white; 
+  margin-right: 1vw; 
+  margin-top: .5vh; 
+  border: none; 
+  border-radius: 8px; 
+  width: 6vw;
+  height: 2vw;
+  transition: background-color 0.3s, transform 0.3s; 
+  cursor: pointer; 
+  font-size: 1vw; 
+  font-family: "Nerko One", serif; 
+}
+
+button:hover {
+  background-color: #ffc107; 
+  transform: scale(1.1); 
+}
+
+.headerTitle {
+  color: white;
+  margin-left: 4vw;
+  margin-top: -1.5vh; 
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 50px;
+  align-items: center;
+}
+
+.username {
+  color: black; 
+  font-weight: bold;
+  font-size: 20px; 
+  font-family: "Nerko One", serif; 
+}
+
+.addArticle {
+  margin-left: 2vw; 
+}
+
+.signOutButton {
+  margin-left: 1vw; 
+}
+.articleSelected {
+  font-family: "Nerko One", serif;
+  text-align: center;  
+  width: 80%; 
+  font-size: 30px; 
+  color: black; 
+}
+.createButton {
+  margin-left: 5vw; 
+}
+
+form {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+}
+
+form input,
+form textarea {
+  margin-bottom: 10px;
+  width: 300px;
+}
+
+nav,
+article {
+  height: 100%;
+  padding: 10px;
+  opacity: 1; 
+  color: white; 
+}
+
+nav {
+  background-image: linear-gradient(to right 90 deg, #8f84ab, #516395);
+  opacity: 0.9;  
+  border-right: 4px solid black;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px; 
+}
+
+nav p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #dee9ff; 
+}
+
+article .date {
+  font-style: italic;
+}
+
+article .body {
+  white-space: break-spaces;
+}
+
+.error {
+  background-color: red;
+  color: gold;
+  padding: 5px;
+}
+
+@media (max-width: 768px) {
+  button {
+    font-size: 2vw; 
+    width: 10vw; 
+    height: 8vw;
+    border-radius: 10px; 
+  }
+  .headerTitle {
+    font-size: 20px; 
+    margin-top: 1vh; 
+  }
+  .username {
+    font-size: 4vw; 
+    margin-top: 0.5vh;  
+  }
+  .articleSelected {
+    font-size: 20px;
+    margin-left: -10vw;  
+  }
+
+  nav {
+    width: 20vw; 
+    font-size: 4vw;
+  }
+}
